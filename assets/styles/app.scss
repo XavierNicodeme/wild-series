@@ -1,0 +1,11 @@
+@import "~bootstrap/scss/bootstrap";
+
+$primary: #eeeee;
+$secondary: #f5a213;
+
+body {
+    background-color: $primary;
+}
+.navbar-brand {
+    background-color: $secondary;
+}
