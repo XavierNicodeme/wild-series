@@ -33,6 +33,11 @@ class CategoryController extends AbstractController
         $category = $this->getDoctrine()
             ->getRepository(Category::class)
             ->findOneBy(['name' => $categoryName]);
+        if (!$category) {
+            throw $this->createNotFoundException(
+                'No program with name : ' . $categoryName. ' found in category\'s table.'
+            );
+        }
         $programs = $this->getDoctrine()
             ->getRepository(Program::class)
             ->findBy(
