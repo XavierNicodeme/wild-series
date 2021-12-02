@@ -13,9 +13,10 @@
                 {% endfor %}
             </div>
         </div>
-        <a href="{{ path('category_index') }}">
-            Retour à la liste des catégories
-        </a>
     {% else %}
+        <p>Aucune série trouvée</p>
     {% endif %}
+    <a href="{{ path('category_index') }}">
+        Retour à la liste des catégories
+    </a>
 {% endblock %}
