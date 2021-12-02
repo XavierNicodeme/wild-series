@@ -1,5 +1,6 @@
 {% extends 'base.html.twig' %}
 {% block body %}
     <h1>Bienvenue !</h1>
-    <a href="/program">Program</a>
+    <a href="{{ path('program_index') }}">Program</a><br>
+    <a href="{{ path('category_index') }}">Categories</a>
 {% endblock %}
