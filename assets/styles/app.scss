@@ -1,14 +1,14 @@
 @import "~bootstrap/scss/bootstrap";
 
-$primary: #eeeee;
+$primary: #eeeeee;
 $secondary: #f5a213;
 
 body {
-    background-color: $primary;
+    background-color: #ffffff;
 }
-.navbar-brand {
+.navbar {
     background-color: $secondary;
 }
 .footer {
-    background-color: $secondary;
+    background-color: $primary;
 }
