@@ -4,7 +4,7 @@
 
 {% block body %}
     <div class="media d-flex">
-        <img class="align-self-start mr-3" src="{{program.poster}}" alt="{{ program.title }} poster">
+        <img class="align-self-start mr-3" src="{{program.poster}}" alt="{{ program.title }} poster" style="width: 150px; height: auto;">
         <div class="media-body">
             <h1 class="mt-0">{{ program.title }}</h1>
             <p>{{ program.summary }}</p>
@@ -17,6 +17,14 @@
             <a href="{{ path("program_season_show", { program: program.id, season:  season.id }) }}">{{ season.description }}</a>
         </li>
     {% endfor %}
+    </ul>
+    <strong>Acteurs :</strong>
+    <ul>
+        {% for actor in program.actors %}
+            <li>{{ actor.name }} </li>
+        {% else %}
+            <li>Aucun acteur pour cette série</li>
+        {% endfor %}
     </ul>
     <a href="{{ path('program_index') }}">
         Retour à la liste des programmes

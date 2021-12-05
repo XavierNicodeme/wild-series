@@ -1,6 +1,10 @@
 {% extends 'base.html.twig' %}
 {% block body %}
     <h1>Bienvenue !</h1>
+    <a href="{{ path('category_index') }}">Categories</a><br>
     <a href="{{ path('program_index') }}">Program</a><br>
-    <a href="{{ path('category_index') }}">Categories</a>
+    <a href="{{ path('season_index') }}">Season</a><br>
+    <a href="{{ path('episode_index') }}">Episode</a><br>
+    <a href="{{ path('actor_index') }}">Actor</a><br>
+
 {% endblock %}
